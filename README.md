@@ -43,12 +43,4 @@ npx create-epic-app@latest
 - 🐛 Open a [GitHub issue](https://github.com/epicweb-dev/epic-stack/issues) to
   report a bug.
 
-## Branding
 
-Want to talk about the Epic Stack in a blog post or talk? Great! Here are some
-assets you can use in your material:
-[EpicWeb.dev/brand](https://epicweb.dev/brand)
-
-## Thanks
-
-You rock 🪨
