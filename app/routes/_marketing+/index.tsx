@@ -63,7 +63,7 @@ export default function Index() {
 							className="underline hover:no-underline"
 							href="https://github.com/epicweb-dev/epic-stack/blob/main/docs/getting-started.md"
 						>
-							Getting Started guide?...
+							Getting Started guide?... This is developer-friendly.
 						</a>
 					</p>
 				</div>
