@@ -5,6 +5,7 @@ const listOfCalculators = [
 	{ name: 'Rental Property', path: 'rental-property' },
 	{ name: 'BRRRR', path: 'brrrr' },
 	{ name: 'Fix and Flip', path: 'fix-and-flip' },
+	{ name: 'Rehab Cost Estimate', path: 'rehab-cost-estimate' },
 ]
 export default function Calculators() {
 	return (
