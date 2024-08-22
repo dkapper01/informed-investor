@@ -305,6 +305,14 @@ function UserDropdown() {
 							</Icon>
 						</Link>
 					</DropdownMenuItem>
+					<DropdownMenuItem asChild>
+						<Link prefetch="intent" to={`/calculator`}>
+							<Icon className="text-body-md" name="calculator">
+								Calculator
+							</Icon>
+						</Link>
+					</DropdownMenuItem>
+
 					<DropdownMenuItem
 						asChild
 						// this prevents the menu from closing before the form submission is completed
