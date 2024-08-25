@@ -209,6 +209,31 @@ function App() {
 				<header className="container py-6">
 					<nav className="flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
 						<Logo />
+						<ul className="flex items-center gap-4">
+							<li>
+								<Link to="/" className="transition hover:text-violet-600">
+									Home
+								</Link>
+							</li>
+							<li>
+								<Link to="/about" className="transition hover:text-violet-600">
+									About
+								</Link>
+							</li>
+							<li>
+								<Link
+									to="/calculators"
+									className="transition hover:text-violet-600"
+								>
+									Calculators
+								</Link>
+							</li>
+							<li>
+								<Link to="/users" className="transition hover:text-violet-600">
+									Users
+								</Link>
+							</li>
+						</ul>
 						<div className="ml-auto hidden max-w-sm flex-1 sm:block">
 							{searchBar}
 						</div>
@@ -306,7 +331,7 @@ function UserDropdown() {
 						</Link>
 					</DropdownMenuItem>
 					<DropdownMenuItem asChild>
-						<Link prefetch="intent" to={`/calculator`}>
+						<Link prefetch="intent" to={`/calculators`}>
 							<Icon className="text-body-md" name="calculator">
 								Calculator
 							</Icon>
