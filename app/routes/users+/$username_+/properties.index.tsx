@@ -20,7 +20,6 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function PropertiesIndexRoute() {
 	const data = useLoaderData<typeof loader>()
-	console.log(data)
 	const user = useOptionalUser()
 	const hasProperties = data.owner?.properties?.length ?? 0 > 0
 	const isOwner = user?.id === data.owner?.id
