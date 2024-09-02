@@ -197,7 +197,6 @@ function App() {
 	const searchBar = isOnSearchPage ? null : <SearchBar status="idle" />
 	const allowIndexing = data.ENV.ALLOW_INDEXING !== 'false'
 	useToast(data.toast)
-
 	return (
 		<Document
 			nonce={nonce}
@@ -233,6 +232,16 @@ function App() {
 									Users
 								</Link>
 							</li>
+							{user && (
+								<li>
+									<Link
+										to={`/users/${user.username}/properties`}
+										className="transition hover:text-violet-600"
+									>
+										Properties
+									</Link>
+								</li>
+							)}
 						</ul>
 						<div className="ml-auto hidden max-w-sm flex-1 sm:block">
 							{searchBar}
@@ -334,6 +343,13 @@ function UserDropdown() {
 						<Link prefetch="intent" to={`/calculators`}>
 							<Icon className="text-body-md" name="calculator">
 								Calculator
+							</Icon>
+						</Link>
+					</DropdownMenuItem>
+					<DropdownMenuItem asChild>
+						<Link prefetch="intent" to={`/users/${user.username}/properties`}>
+							<Icon className="text-body-md" name="calculator">
+								Properties
 							</Icon>
 						</Link>
 					</DropdownMenuItem>

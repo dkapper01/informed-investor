@@ -22,6 +22,7 @@ model User {
   image       UserImage?
   password    Password?
   notes       Note[]
+  properties  Property[]
   roles       Role[]
   sessions    Session[]
   connections Connection[]
@@ -60,6 +61,35 @@ model NoteImage {
 
   // non-unique foreign key
   @@index([noteId])
+}
+
+model Property {
+  id      String @id @default(cuid())
+  name    String
+  address String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  images PropertyImage[]
+
+  owner   User   @relation(fields: [ownerId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  ownerId String
+
+  @@index([ownerId])
+}
+
+model PropertyImage {
+  id          String  @id @default(cuid())
+  altText     String?
+  contentType String
+  blob        Bytes
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  property   Property   @relation(fields: [propertyId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  propertyId String
 }
 
 model UserImage {
